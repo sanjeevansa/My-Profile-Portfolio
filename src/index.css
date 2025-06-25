@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(59, 130, 246, 0.8),
+      0 0 16px rgba(59, 130, 246, 0.6),
+      0 0 24px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 12px rgba(96, 165, 250, 0.9),
+      0 0 20px rgba(147, 197, 253, 0.7),
+      0 0 28px rgba(191, 219, 254, 0.5);
+  }
+}
+
+.animate-text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.image-light-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.image-light-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 10;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(59, 130, 246, 0.6) 0%,
+    rgba(59, 130, 246, 0.2) 40%,
+    transparent 80%
+  );
+  filter: blur(20px);
+  transform: translateZ(20px);
+}
+
+.image-light-container:hover .image-light-overlay {
+  opacity: 0.8;
+}
+
+/* 3D tilt effect */
+.image-light-container:hover {
+  transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .image-light-container {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .animate-text-glow {
+    animation: textGlow 3s ease-in-out infinite;
+    font-size: 1.5rem;
+  }
+  
+  .image-light-overlay {
+    filter: blur(15px);
+  }
+}
+
+
+/* Text box light effect */
+.text-light-container {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.text-light-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 0;
+  background: radial-gradient(
+    circle at var(--tx, 50%) var(--ty, 50%),
+    rgba(243, 229, 166, 0.3) 0%,
+    rgba(255, 145, 20, 0.1) 40%,
+    transparent 70%
+  );
+  filter: blur(15px);
+}
+
+.text-light-container:hover .text-light-overlay {
+  opacity: 0.6;
+}
+
+/* Enhanced image light effect */
+.image-light-overlay {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(59, 130, 246, 0.6) 0%,
+    rgba(59, 130, 246, 0.2) 40%,
+    transparent 80%
+  );
+}
+
+/* Glow effect for both containers */
+.image-light-container:hover,
+.text-light-container:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
