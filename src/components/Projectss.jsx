@@ -3,7 +3,7 @@ import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import "../index.css";
 
-const Projects = () => {
+const Projectss = () => {
   const imageContainerRefs = useRef([]);
   const textContainerRefs = useRef([]);
 
@@ -216,4 +216,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Projectss;
