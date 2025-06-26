@@ -20,6 +20,10 @@ export default {
           '50%': { 
             boxShadow: '0 0 20px 2px rgba(147, 197, 253, 0.4), 0 0 20px 20px rgba(191, 219, 254, 0.3)' 
           },
+          pulseGlow: {
+          '0%, 100%': { backgroundColor: 'rgba(253, 224, 71, 0.3)' },
+          '50%': { backgroundColor: 'rgba(253, 224, 71, 0.6)' },
+        },
         },
         pulse: {
           '0%, 100%': { opacity: 1 },
@@ -30,6 +34,7 @@ export default {
         shimmer: 'shimmer 2s infinite linear',
         glow: 'glow 3s ease-in-out infinite',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        pulseGlow: 'pulseGlow 2s infinite',
       },
     },
   },

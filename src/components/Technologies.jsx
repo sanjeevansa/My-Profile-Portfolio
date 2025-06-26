@@ -1,17 +1,22 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
+import { RiReactjsLine } from "react-icons/ri";               // React icon
+import { TbBrandNextjs } from "react-icons/tb";               // Next.js icon
 import {
   SiMongodb,
   SiPython,
   SiSpringboot,
   SiTensorflow,
-} from "react-icons/si";
-import { FaNodeJs, FaMicrosoft } from "react-icons/fa";
-import { DiRedis, DiJava, DiCode } from "react-icons/di";
-import { BiLogoPostgresql } from "react-icons/bi";
+  SiAndroidstudio,
+  SiDotnet,
+} from "react-icons/si";                                      // MongoDB, Python, etc.
+import { FaNodeJs, FaMicrosoft, FaFileExcel } from "react-icons/fa"; // Node.js, Microsoft, Excel
+import { DiRedis, DiJava, DiCode } from "react-icons/di";     // Redis, Java, Code icon
+import { BiLogoPostgresql } from "react-icons/bi";            // PostgreSQL
+import { RiCodeBoxLine } from "react-icons/ri";               // Using as alternative for RStudio
+import RStudioIcon from "../RStudioIcon";
 import PropTypes from "prop-types";
 
+// Technology stack including new tools and frameworks
 const techStack = [
   { icon: <RiReactjsLine />, color: "text-cyan-400" },
   { icon: <TbBrandNextjs />, color: "text-white" },
@@ -25,18 +30,26 @@ const techStack = [
   { icon: <DiCode />, color: "text-violet-500" },
   { icon: <SiTensorflow />, color: "text-orange-400" },
   { icon: <SiSpringboot />, color: "text-green-700" },
+
+  // Newly added technologies
+  { icon: <SiAndroidstudio />, color: "text-green-500" },       // Android Studio
+  { icon: <FaFileExcel />, color: "text-green-600" },            // Excel (FontAwesome)
+  { icon: <RiCodeBoxLine />, color: "text-blue-400" },          // R Studio alternative
+  { icon: <SiDotnet />, color: "text-indigo-500" },             // C# ASP.NET
+  { icon: <SiPython />, color: "text-pink-500" },               // ML (reuse Python icon)
+  { icon: <SiTensorflow />, color: "text-yellow-500" },         // DL (reuse TensorFlow icon)
+  { icon: <DiCode />, color: "text-blue-300" },                 // Model Prediction (generic code icon)
+  { icon: <RStudioIcon className="w-12 h-12" />, color: "text-blue-400" },
 ];
 
-// Icon card with improved mouse move animation
+// Animated icon card component
 const IconCard = ({ icon, color }) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  
-  // Small movement range for floating effect
-  const x = useTransform(mouseX, (v) => (v / 10) - 10);
-  const y = useTransform(mouseY, (v) => (v / 10) - 10);
 
-  // When mouse leaves, animate values back to 0 for smooth reset
+  const x = useTransform(mouseX, (v) => v / 10 - 10);
+  const y = useTransform(mouseY, (v) => v / 10 - 10);
+
   const handleMouseLeave = () => {
     animate(mouseX, 0, { type: "spring", stiffness: 100 });
     animate(mouseY, 0, { type: "spring", stiffness: 100 });
@@ -46,7 +59,6 @@ const IconCard = ({ icon, color }) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const relX = e.clientX - rect.left;
     const relY = e.clientY - rect.top;
-    // Set motion values relative to center of icon (width/2, height/2)
     mouseX.set(relX - rect.width / 2);
     mouseY.set(relY - rect.height / 2);
   };
@@ -58,12 +70,9 @@ const IconCard = ({ icon, color }) => {
       whileHover={{ scale: 1.15, rotate: 3 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ perspective: 400 }} // Add perspective for 3D effect
+      style={{ perspective: 400 }}
     >
-      <motion.div
-        style={{ x, y }}
-        className="will-change-transform"
-      >
+      <motion.div style={{ x, y }} className="will-change-transform">
         <div
           className={`text-6xl transition-transform duration-300 ${color} drop-shadow-lg`}
         >

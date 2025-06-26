@@ -25,10 +25,34 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: index * 0.2 }}
           >
-            <div className="w-full md:w-1/4">
-              <p className="mb-2 pt-2 text-base text-yellow-300 italic">
-                {experience.year}
-              </p>
+            <div className="w-full md:w-1/4 flex items-center justify-start">
+              <motion.p
+                  className="text-4xl font-bold italic text-transparent bg-clip-text 
+                            bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300 
+                            bg-[length:200%_200%] animate-shimmer 
+                            px-4 py-2 rounded-md shadow-lg backdrop-blur cursor-pointer"
+                  initial={{ x: -10, boxShadow: "0px 0px 0px rgba(255, 255, 0, 0)" }}
+                  animate={{
+                    x: [ -10, 10, -10 ],
+                    boxShadow: [
+                      "0px 0px 0px rgba(255, 255, 0, 0)",
+                      "0px 0px 15px rgba(255, 255, 0, 0.8)",
+                      "0px 0px 0px rgba(255, 255, 0, 0)"
+                    ],
+                  }}
+                  transition={{
+                    x: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                    boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }
+                  }}
+                  whileTap={{
+                    scale: 1.2,
+                    rotate: 5,
+                    boxShadow: "0px 0px 25px rgba(255,255,0,1)",
+                  }}
+                >
+                  {experience.year}
+                </motion.p>
+
             </div>
 
             <div className="w-full max-w-xl lg:w-3/4 pt-2">
