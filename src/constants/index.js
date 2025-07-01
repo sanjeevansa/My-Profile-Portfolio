@@ -92,6 +92,59 @@ export const EXPERIENCES = [
     description: `This Enterprise-Level Full-Stack Food Ordering Platform is a powerful, scalable web application built using the MERN stack (MongoDB, Express.js, React, Node.js) with modern tools like Vite, Shadcn UI, Auth0, and Stripe. Designed for production-level functionality, this app supports a complete restaurant management workflow—from customer profile management and restaurant creation to advanced search, filtering, pagination, cart functionality, and secure online payments. Admins and restaurant owners can manage restaurants, menus, orders, and delivery statuses, while customers enjoy features like profile updates, cart management, order tracking, and a smooth checkout experience using Stripe integration. Image management is handled via Cloudinary, while deployment is powered by Render. Auth0 handles robust authentication and authorization, and the platform follows modern design practices with a responsive, mobile-first UI using Tailwind CSS and React Router. This project demonstrates strong architecture, real-world problem solving, and advanced full-stack development—ideal for professional portfolios or launching a live SaaS product.`,
     technologies: ["React.js", "Tailwind CSS","Auth0 with JWT Access Tokens", "Shadcn UI", "Auth0", "Stripe", "MongoDB", "Express.js", "Node.js", "Cloudinary", "Render", "React Router", "Auth0", "Stripe", "Tailwind CSS", "React Router", "Stripe CLI","Stripe API","Express.js","session API"],
   },
+
+  {
+    year: "2025",
+    role: "BSc Software Engineer @ Data Science and Analytics",
+    company: "London House Price Prediction Project",
+    description: `In this project, I designed and implemented a complete machine learning pipeline to predict house prices in London, integrating the solution into a Flask web application for real-time predictions. The pipeline included data ingestion and cleaning, imputing missing numerical values with median strategies and categorical variables with mode imputation. I used Label Encoding to convert categorical columns (outcode, tenure, property type, current energy rating) into numeric form.
+      Through extensive exploratory data analysis (EDA), I visualized feature distributions, correlations, and outliers using seaborn and matplotlib. The core predictive model was a Random Forest Regressor, achieving strong performance as measured by R² and Mean Absolute Error. The trained model was serialized with pickle and integrated into a Flask web framework, allowing users to input property details on a website and receive instant price predictions.
+      This project demonstrates my ability to build end-to-end machine learning solutions, from data preparation and model training to deployment as a web service, combining Python, pandas, scikit-learn, seaborn, matplotlib, pickle, and Flask to deliver accurate and accessible real estate forecasts.`,
+    technologies: ["Python", "pandas", "scikit-learn", "seaborn", "matplotlib", "Random Forest Regressor", "Label Encoding", "EDA", "Data Cleaning", "Model Serialization", "Deployment", "Documentation","Flask"],
+  },
+
+  {
+    year: "2025",
+    role: "BSc Software Engineer @ Data Science and Analytics",
+    company: "Twitter Sentiment Analysis Project",
+    description: `In this project, I developed a machine learning pipeline to [predict/classify] [target variable] using a dataset containing [brief description of data]. The workflow included data cleaning, handling missing values, and feature engineering to prepare the data for modeling. I performed exploratory data analysis with seaborn and matplotlib to understand feature distributions and identify key relationships.
+For modeling, I implemented and compared different algorithms including [e.g., Random Forests, Gradient Boosting, Logistic Regression], optimizing hyperparameters to improve accuracy. I evaluated the models using metrics such as [accuracy, R², MAE, etc.]. The trained model was serialized with pickle/joblib for future deployment.
+This project demonstrates my ability to build end-to-end supervised learning solutions, combining Python, pandas, NumPy, scikit-learn, seaborn, and matplotlib to deliver reliable predictions.`,
+    technologies: ["python", "pandas", "NumPy", "scikit-learn", "seaborn", "matplotlib", "Random Forests", "Gradient Boosting", "Logistic Regression", "Hyperparameter Tuning", "Model Evaluation", "Model Serialization","Flask", "pickle/joblib","EDA"],
+  },
+
+  {
+    year: "2025",
+    role: "BSc Software Engineer @ Data Science and Analytics",
+    company: "Potato Leaf Disease Detection Using Deep Learning (Flask Web App with ERP Insight)",
+    description: `This project is a deep learning–based image classification system developed to detect diseases in potato leaves, specifically Potato Early Blight, Potato Late Blight, and Healthy leaves. The workflow begins with dataset cleaning and preprocessing, where thousands of leaf images are resized, normalized, and augmented to improve generalization. After preparing the data, a Convolutional Neural Network (CNN) model was built and trained using TensorFlow/Keras, achieving an accuracy of over 90% on the validation set. The trained model is saved as model.h5 and integrated into a Flask web application.
+Users can upload potato leaf images in .jpg, .jpeg, or .png format through a simple and responsive web interface. Once uploaded, the image is preprocessed and passed into the model, which predicts the disease label, confidence score, and provides an image preview. The system also displays detailed treatment advice and disease information for Early Blight and Late Blight, aiding farmers and agricultural officers in quick and informed decision-making.
+This project simulates an ERP (Enterprise Resource Planning) feature by automating the disease detection pipeline from image input to prediction and treatment suggestions, which can be extended into real-time dashboards for farm monitoring systems. Additional functions include file validation, secure image storage, and visualization of model results with Bootstrap-enhanced UI. The backend logic handles routing, prediction, and dynamic rendering using Jinja templates. Overall, this project demonstrates the power of deep learning in agriculture and offers potential integration with smart farming systems or agricultural ERP platforms.`,
+    technologies: ["Python", "TensorFlow/Keras", "Flask", "HTML5", "CSS3", "Bootstrap 4", "Jinja2", "NumPy", "PIL/Pillow", "Model Serialization (model.h5)", "Image Preprocessing", "Image Augmentation", "Convolutional Neural Networks (CNN)", "ERP Insight", "Flask", "Flask-Bootstrap","OpenCV / Keras Preprocessing"],
+  },
+
+  {
+    year: "2025",
+    role: "BSc Software Engineer @ Data Science and Analytics",
+    company: "Face Recognition Attendance System with Admin Panel (Flask + OpenCV + Streamlit)",
+    description: `This project is a smart and efficient Face Recognition Attendance System developed using Python, OpenCV, Flask, and Streamlit, aimed at automating employee attendance through real-time face detection and recognition. The system captures facial images via webcam, detects faces using Haar Cascade classifiers, and stores face data as flattened image arrays. These are then used to train a K-Nearest Neighbors (KNN) classifier to identify individuals based on facial features. Each user is assigned a unique, auto-generated numeric ID, and their attendance is recorded with Name, ID, Time, Date, Description, and Leave Time, stored daily in structured CSV files.
+An integrated Flask-based Admin Panel provides full control over attendance data management. Through a clean and responsive web interface, administrators can insert new records, update existing entries, delete incorrect records, search for entries, view all CSV files, and download attendance reports. The backend uses Jinja2 templating for dynamic rendering and Bootstrap for styling.
+Additionally, a separate Streamlit Admin Dashboard offers an interactive and user-friendly interface for managing attendance. It allows users to search by employee ID, edit or delete records in real time, and view the full attendance table. The system ensures daily attendance files are automatically created if missing and handles missing columns (like “Leave Time”) gracefully. The solution supports manual entry, review, and correction of data, making it highly practical for real-world use in schools, offices, or remote work scenarios.
+This project showcases how computer vision, machine learning, and web development can be effectively integrated to solve real-time administrative challenges in a lightweight and scalable manner.`,
+    technologies: ["Python", "OpenCV", "Flask", "Streamlit", "HTML5", "CSS3", "Bootstrap 4", "Jinja2", "NumPy", "Pandas", "K-Nearest Neighbors (KNN)", "Haar Cascade Classifier", "Face Detection and Recognition", "Attendance Management", "CSV File Handling", "Webcam Integration", "Responsive Design","OS module","Datetime module"],
+  },
+
+  {
+    year: "2025",
+    role: "BSc Software Engineer @ Data Science and Analytics",
+    company: "Final Project Plant Disease Detection Using Deep Learning (Flask Web App with ERP Insight)",
+    description: `This project is a full-scale AI-powered plant disease detection system that leverages deep learning, natural language processing, and web technologies to identify crop diseases and provide multilingual treatment guidance to farmers. At its core, a Convolutional Neural Network (CNN) was implemented using TensorFlow/Keras to classify 10 types of leaf diseases from RGB images resized to 128×128. The model includes multiple convolutional blocks with ReLU activations, max pooling, dense layers, and a softmax output. Advanced data augmentation techniques like random rotations, zooming, shifting, and flipping were applied using ImageDataGenerator, and the model achieved 93.2% validation accuracy over 50 epochs with an Adam optimizer and categorical cross-entropy loss.
+The image preprocessing pipeline includes normalization, resizing, and reshaping for batch predictions, with a confidence threshold set at 85% for reliable output. A complete multilingual natural language interface supports English-Tamil conversion using the Google Translate API, and dynamic UI content (labels, treatment details, etc.) is localized accordingly. Dual text-to-speech (TTS) systems—gTTS for Tamil and Web Speech API for English—are integrated for inclusive accessibility, especially for low-literacy users.
+Treatment data is stored in structured Pandas DataFrames, backed by an Excel-powered database that contains scientific disease names, detailed treatment protocols, chemical/organic solutions, usage guidelines, and even product links for farmers. A modular Flask backend supports prediction APIs, translation services, antibiotic recommendation logic, and structured error handling. The frontend includes voice buttons, language toggle options, AJAX-powered content updates, and a responsive mobile-first design for field use.
+To optimize performance, the model was converted to TensorFlow Lite, with quantization-aware training reducing its memory footprint to under 500MB, and ensuring <1.8 seconds inference time on CPU. Prediction and translation results are cached to boost responsiveness. The system supports containerized deployment via Docker, and is compatible with AWS Elastic Beanstalk, Google App Engine, and Raspberry Pi for both cloud and edge computing scenarios.
+This project demonstrates end-to-end proficiency in computer vision, NLP, full-stack development, and UX design, addressing key challenges in agriculture with accessible technology. It empowers farmers with voice-enabled, mobile-optimized, and multilingual tools to detect diseases early, receive actionable solutions, and increase yield—even in low-connectivity environments.`,
+    technologies: ["TensorFlow / Keras", "Convolutional Neural Networks (CNN)", "ImageDataGenerator", "Flask", "HTML5", "CSS3", "Bootstrap 4", "Jinja2", "NumPy", "Pandas", "Google Translate API", "gTTS (Google Text-to-Speech)", "Web Speech API", "Excel Database", "Docker", "AWS Elastic Beanstalk", "Google App Engine", "Raspberry Pi", "TensorFlow Lite", "Quantization-aware training","OpenCV / PIL"],
+  },
   
   
   
@@ -99,33 +152,43 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Food Odering WebSite",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Enterprise-Level Full-Stack Food Ordering Platform: A scalable MERN-stack application (MongoDB, Express.js, React + Vite, Node.js) with Auth0 authentication, Stripe payments, and Cloudinary image management. Features include restaurant and menu management, advanced search, filtering, cart, secure checkout, order tracking, and responsive UI with Tailwind CSS and Shadcn UI. Designed for production with Render deployment, modern architecture, and real-world SaaS capabilities—ideal for professional portfolios or live projects.",
+    technologies: ["React.js", "Tailwind CSS","Auth0 with JWT Access Tokens", "Shadcn UI", "Auth0", "Stripe", "MongoDB", "Express.js", "Node.js", "Cloudinary", "Render", "React Router", "Auth0", "Stripe", "Tailwind CSS", "React Router", "Stripe CLI","Stripe API","Express.js","session API"],
   },
   {
-    title: "Task Management App",
+    title: "Commercial programming project Fullstack Food Ordering App MERN",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Fullstack Food Ordering App: A beginner-friendly project using Next.js 14 and MongoDB. Features dynamic restaurant pages, user authentication, cart, and an admin dashboard for managing menus, categories, and users. Implements server-side rendering, API routes, session-based auth, and full CRUD operations. Ideal for learning modern JavaScript, MongoDB Atlas, and Next.js App Router architecture while building a clean, functional portfolio project.",
+    technologies: ["Next.js 14", "MongoDB", "React", "Tailwind CSS", "Next.js App Router", "Session-based authentication", "Form handling", "Database integration using MongoDB", "Server-side rendering", "API routes", "NextAuth.js", "Google OAuth2"],
   },
   {
-    title: "Portfolio Website",
+    title: "Vehicle Rent Booking System:",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      " A web app developed as a BSc Software Engineering Advance level project. Features Admin and Customer roles. Admins can manage vehicle inventory, approve bookings, and generate reports. Customers can register, browse vehicles, make bookings, and track history. The system streamlines rental management with automated workflows, user-friendly design, role-based access control, and robust full-stack development.",
+    technologies: ["HTML5", "CSS3", "Bootstrap 4", "PHP", "SQL", "jQuery", "GitHub", "Visual Studio Code"],
   },
   {
-    title: "Blogging Platform",
+    title: "eCommerce Web Application:",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "A full-stack platform using Spring Boot (backend) and React + TypeScript (frontend). Features role-based modules for Customers, Sellers, and Admins. Customers can browse products, manage carts, checkout with Razorpay/Stripe, apply coupons, and track orders. Sellers have dashboards for product management, orders, and analytics. Admins control seller approvals, coupons, and site settings. Built with Spring Security, JWT, MySQL, Redux Toolkit, Tailwind CSS, MUI, and Formik. A professional, production-ready solution ideal for portfolios, skill-building, or launching a real business.",
+    technologies: ["java", "Spring Boot", "React", "Tailwind CSS", "Spring Security", "JWT", "MySQL", "Java Mail Sender"],
   },
+
+  {
+    title: "AI-Powered Plant Disease Detection System:",
+    image: "https://thumbs.dreamstime.com/b/young-farmer-using-smartphone-app-to-monitor-crop-health-irrigation-representing-integration-technology-modern-291031769.jpg",
+    description:
+      " A full-scale solution combining deep learning, NLP, and web technologies to identify 10 crop diseases and deliver multilingual treatment guidance. A TensorFlow/Keras CNN (93.2% accuracy) classifies leaf images with advanced data augmentation. Multilingual support (English-Tamil) uses Google Translate API and dual TTS (gTTS & Web Speech API) for accessibility. Treatment protocols are stored in Pandas DataFrames linked to an Excel database. A Flask backend provides prediction APIs, translation, and recommendations, while a responsive frontend features voice controls and dynamic content. Optimized via TensorFlow Lite (sub-500MB) for <1.8s inference, Docker deployment, and compatibility with cloud and edge devices. This project showcases end-to-end skills in computer vision, NLP, full-stack development, and UX, empowering farmers with accessible, voice-enabled disease management tools.",
+    technologies: ["TensorFlow / Keras", "Convolutional Neural Networks (CNN)", "ImageDataGenerator", "Flask", "HTML5", "CSS3", "Bootstrap 4", "Jinja2", "NumPy", "Pandas", "Google Translate API", "gTTS (Google Text-to-Speech)", "Web Speech API", "Excel Database", "Docker", "AWS Elastic Beanstalk", "Google App Engine", "Raspberry Pi", "TensorFlow Lite", "Quantization-aware training","OpenCV / PIL"],
+  },
+
+
 ];
 
 export const CONTACT = {
