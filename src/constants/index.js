@@ -16,7 +16,7 @@ export const EXPERIENCES = [
     year: "2021 - Present",
     role: "HND Software Engineer",
     company: "Web Application Academy.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+    description: `I developed a dynamic web application for gym management using PHP and MySQL as the core backend technologies. The system enables administrators to manage memberships, track payments, and schedule classes efficiently. I integrated Bootstrap for a responsive, modern user interface and utilized JavaScript to enhance interactivity and user experience. Additionally, I incorporated the Google Maps API to display gym locations and provide directions to users. This project demonstrates my ability to build full-featured web solutions that combine backend development, database management, and modern frontend technologies.`,
     technologies: ["Javascript", "HTML5", "CSS3", "Bootstrap 4","PHP", "MySQL"],
   },
   {
